@@ -13,8 +13,9 @@ public:
     {
         this->var1 = var1;
     }
-    friend bool operator==(const Logic2&, const Logic1& );
-	friend bool operator==(const Logic1&, const Logic2& );
+    friend bool operator==(const Logic2&, const Logic1&);   //for the second class's object == the first class's object
+    friend bool operator==(const Logic1&, const Logic2&);   //for the first class's object == the second class's object
+
 };
 
 class Logic2
@@ -27,9 +28,8 @@ public:
     {
         this->var2 = var2;
     }
-    friend bool operator==(const Logic2&, const Logic1&);  //for the second class's object == the first class's object
-	friend bool operator==(const Logic1&, const Logic2& ); //for the first class's object == the second class's object
-
+    friend bool operator==(const Logic2&, const Logic1&);  
+    friend bool operator==(const Logic1&, const Logic2&); 
 };
 
 bool operator ==(const Logic2& l2, const Logic1& l1)
